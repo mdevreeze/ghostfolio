@@ -3,7 +3,7 @@ services:
   ghostfolio:
     image: ghostfolio/ghostfolio:latest
     env_file:
-      - ../.env
+      - ../stack.env
     environment:
       DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}?connect_timeout=300&sslmode=prefer
       NODE_ENV: production
